@@ -9,10 +9,11 @@
 
 #If the bill was $150.00, split between 5 people, with 12% tip. 
 print("Welcome to the tip caluclator.")
-total_bill = input("What was the total bill? ")
-tip = input("What percentage tip would you like to give? ")
-how_many_people = input("How many people to split the bill? ")
-person_pay = round( (float(total_bill) / int(how_many_people)) * (float(tip) / 100 + 1) ,2 )
+total_bill = float(input("What was the total bill? "))
+tip = int(input("What percentage tip would you like to give? "))
+how_many_people = int(input("How many people to split the bill? "))
+
+person_pay = round( (total_bill / how_many_people) * (tip / 100 + 1) , 2 )
 print(f"Each person should pay: ${person_pay}")
 
 #(bill / how_many_people) * tip (ex: 1.12)
